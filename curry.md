@@ -34,6 +34,24 @@ Notes:
 * We return a function that has the original functions state and arguments in its closure space
 * when the new function is called, it calls the origin function, but always concatates the original functions arguments into the new arguments.
 
+### Examples
+
+This may not be a practical example, but its the only thing I can think of right now (might change later when I come to a more practical example).
+
+``` javascript
+
+	function add (a, b){
+		return a + b
+	}
+
+	var add5 = add.curry(5)
+	add5(4) // returns 9
+
+```
+
+The 'a' argument is now permanently assigned to 5 in the add5 function. 
+
+
 Resources:
 * https://javascriptweblog.wordpress.com/2010/04/05/curry-cooking-up-tastier-functions/
 
